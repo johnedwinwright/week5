@@ -45,3 +45,5 @@ group :development do
   gem 'spring'
 end
 
+#simple_form
+gem 'simple_form'
