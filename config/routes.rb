@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :vehicles
   resources :models
   resources :makes
   # The priority is based upon order of creation: first created -> highest priority.
