@@ -4,6 +4,7 @@
   <div class="form-inputs">
     <%= f.input :price%>
     <%= f.association :model, as: :radio_buttons %>
+    <%= f.association :features, as: :check_boxes %>
     <%= f.input :color %>
     <%= f.input :condition %>
   </div>
