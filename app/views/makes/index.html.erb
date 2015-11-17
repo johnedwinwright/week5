@@ -2,7 +2,7 @@
 
 <h1>Listing Makes</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Name</th>
@@ -16,9 +16,11 @@
       <tr>
         <td><%= make.name %></td>
         <td><%= make.logo %></td>
-        <td><%= link_to 'Show', make %></td>
-        <td><%= link_to 'Edit', edit_make_path(make) %></td>
-        <td><%= link_to 'Destroy', make, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="text-right">
+        <%= link_to 'Show', make, class: "btn : btn-default" %>
+        <%= link_to 'Edit', edit_make_path(make), class: "btn : btn-default" %>
+        <%= link_to 'Destroy', make, method: :delete, class: "btn : btn-danger", data: { confirm: 'Are you sure?' } %>
+      </td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Make', new_make_path %>
+<%= link_to 'New Make', new_make_path, class: "btn : btn-primary" %>

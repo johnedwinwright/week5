@@ -2,7 +2,7 @@
 
 <h1>Listing Models</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Name</th>
@@ -16,9 +16,11 @@
       <tr>
         <td><%= model.name %></td>
         <td><%= model.make.name if model.make %></td>
-        <td><%= link_to 'Show', model %></td>
-        <td><%= link_to 'Edit', edit_model_path(model) %></td>
-        <td><%= link_to 'Destroy', model, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="text-right">
+        <%= link_to 'Show', model, class: "btn : btn-default" %>
+        <%= link_to 'Edit', edit_model_path(model), class: "btn : btn-default" %>
+        <%= link_to 'Destroy', model, method: :delete, class: "btn : btn-danger", data: { confirm: 'Are you sure?' } %>
+      </td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Model', new_model_path %>
+<%= link_to 'New Model', new_model_path, class: "btn : btn-primary" %>

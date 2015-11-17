@@ -2,7 +2,7 @@
 
 <h1>Listing Features</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Name</th>
@@ -16,9 +16,11 @@
       <tr>
         <td><%= feature.name %></td>
         <td><%= feature.description %></td>
-        <td><%= link_to 'Show', feature %></td>
-        <td><%= link_to 'Edit', edit_feature_path(feature) %></td>
-        <td><%= link_to 'Destroy', feature, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="text-right">
+        <%= link_to 'Show', feature, class: "btn : btn-default" %>
+        <%= link_to 'Edit', edit_feature_path(feature), class: "btn : btn-default" %>
+        <%= link_to 'Destroy', feature, method: :delete, class: "btn : btn-danger", data: { confirm: 'Are you sure?' } %>
+      </td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Feature', new_feature_path %>
+<%= link_to 'New Feature', new_feature_path, class: "btn : btn-primary" %>
